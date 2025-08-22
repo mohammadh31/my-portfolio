@@ -1,41 +1,48 @@
-import { Box, Typography, Grid, Avatar } from "@mui/material";
-import profilePic from "../assets/10361139534_ecd5399501_o.jpg";
-import { motion as Motion } from "framer-motion";
-
-function About() {
+import { Box, Stack, Typography } from "@mui/material";
+// import myPhoto from "../../public/tim-swaan-eOpewngf68w-unsplash.jpg";
+const About = () => {
   return (
-    <Box sx={{ marginY: 5 }}>
-      <Motion.div
-        initial={{ opacity: 0, x: -40 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6 }}
+    <Box sx={{ height: "90vh" }} my={3}>
+      <Stack
+        boxShadow={10}
+        direction="row"
+        spacing={4}
+        border={4}
+        p={3}
+        borderRadius={5}
+        sx={{ backgroundColor: "#393E46" }}
       >
-        <Grid container spacing={4} alignItems="center">
-          <Grid item xs={12} md={4}>
-            <Avatar
-              src={profilePic}
-              sx={{
-                width: 150,
-                height: 150,
-                border: "4px solid white",
-              }}
-            />
-          </Grid>
-          <Grid item xs={12} md={8}>
-            <Typography variant="h4" gutterBottom>
-              About Me
-            </Typography>
-            <Typography>
-              • A junior frontend developer who has completed several training
-              projects using HTML, CSS, and JavaScript. I am looking for an
-              opportunity to start my professional career in a dynamic tech
-              environment that helps me grow and evolve.
-            </Typography>
-          </Grid>
-        </Grid>
-      </Motion.div>
+        <Box
+          borderRadius={5}
+          boxShadow={10}
+          sx={{ width: "100vw", height: "80vh" }}
+          overflow={"hidden"}
+        >
+          <img
+            src="../../public/tim-swaan-eOpewngf68w-unsplash.jpg"
+            style={{ width: "100%", height: "100%" }}
+          />
+        </Box>
+        <Box alignContent={"center"} justifyItems={"center"}>
+          <Typography
+            color="#EEEEEE"
+            sx={{ textShadow: "0px 10px 20px black" }}
+            variant="h2"
+          >
+            Hi I'am Mohamad Hawaj
+          </Typography>
+
+          <br />
+          <Typography variant="h5" color="#EEEEEE">
+            A junior frontend developer who has completed several training
+            projects using HTML, CSS, and JavaScript. I am looking for an
+            opportunity to start my professional career in a dynamic tech
+            environment that helps me grow and evolve.
+          </Typography>
+        </Box>
+      </Stack>
     </Box>
   );
-}
+};
 
 export default About;
