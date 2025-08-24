@@ -1,7 +1,8 @@
+import { Box } from "@mui/material";
 import React from "react";
 
 const Skills = () => {
-  return <div>Skills</div>;
+  return <Box sx={{ backgroundColor: "#EEEEEE", height: "60vh" }}></Box>;
 };
 
 export default Skills;

@@ -9,14 +9,12 @@ import "@fontsource/roboto/600.css";
 
 function App() {
   return (
-    <Box sx={{ backgroundColor: "#222831" }}>
-      <Container maxWidth="xl">
-        <Header />
-        <About />
-        <Skills />
-        <Experience />
-        <Contact />
-      </Container>
+    <Box>
+      <Header />
+      <About />
+      <Skills />
+      <Experience />
+      <Contact />
     </Box>
   );
 }
